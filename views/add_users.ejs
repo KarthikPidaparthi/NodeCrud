@@ -1,0 +1,86 @@
+<%- include('layout/header') %>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  .bodyy {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  label {
+    display: flex;
+    margin-bottom: 8px;
+    color: #555;
+  }
+
+  input,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>Add Users Page</h1>
+      <div class="bodyy">
+        <form action="/add" method="post" enctype="multipart/form-data">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <br />
+          <label for="image">Select Image:</label>
+          <input type="file" id="image" name="image" accept="image/*" />
+          <br />
+          <button type="submit" name="submit" value="Add User">Add User</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('layout/footer') %>
